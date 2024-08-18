@@ -1,0 +1,106 @@
+{% load static %}
+
+<!-- index.html :: First page -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stocks</title>
+  </head>
+  <body>
+    <div class="index-page">
+      <!-- header component -->
+      <div
+        class="header-component"
+        style="
+          height: 40%;
+          width: full;
+          padding: 1%;
+          background-color: crimson;
+          color: whitesmoke;
+          border: black solid 4px;
+          font-size: xx-large;
+          font-family: 'Showcard Gothic';
+        "
+      >
+        Stocks &nbsp; Inventory &nbsp; for &nbsp; you..
+      </div>
+
+      <!-- Mid component -->
+      <div
+        class="mid-component"
+        style="
+          height: 100%;
+          width: full;
+          margin-top: 1%;
+          margin-bottom: 1%;
+          padding: 5%;
+          text-align: center;
+        "
+      >
+        <button
+          class="register-button-component"
+          style="
+            height: 10%;
+            margin-top: 2%;
+            margin-bottom: 3%;
+            padding: 2%;
+            padding-right: 4%;
+            padding-left: 4%;
+            background-color: blue;
+            color: white;
+            border-radius: 5%;
+            font-size: xx-large;
+            font-family: 'Showcard Gothic';
+          "
+        >
+          <a
+            href="{% url 'registration_url' %}"
+            style="color: white; text-decoration: none"
+            >Registration</a
+          ></button
+        ><br />
+        <button
+          class="login-button-component"
+          style="
+            height: 10%;
+            margin-top: 3%;
+            margin-bottom: 2%;
+            padding: 2%;
+            padding-right: 4%;
+            padding-left: 4%;
+            background-color: blue;
+            color: white;
+            border-radius: 5%;
+            font-size: xx-large;
+            font-family: 'Showcard Gothic';
+          "
+        >
+          <a
+            href="{% url 'signin_url' %}"
+            style="color: white; text-decoration: none"
+          >
+            Sign In</a
+          >
+        </button>
+      </div>
+
+      <!-- footer component -->
+      <div
+        class="footer-component"
+        style="
+          height: 40%;
+          width: full;
+          padding: 1%;
+          background-color: crimson;
+          color: whitesmoke;
+          border: black solid 5px;
+          font-size: x-large;
+          font-family: 'Showcard Gothic';
+        "
+      >
+        Technical &nbsp; Round: &nbsp; 2023 &nbsp; -- &nbsp; The &nbsp; Investor
+        &nbsp; Co.
+      </div>
+    </div>
+  </body>
+</html>

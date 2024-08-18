@@ -1,0 +1,120 @@
+{% load static %}
+
+<!-- registration.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stocks</title>
+  </head>
+  <body>
+    <div class="login-page">
+      <!-- header component -->
+      <div
+        class="header-component"
+        style="
+          height: 40%;
+          width: full;
+          padding: 1%;
+          background-color: crimson;
+          color: whitesmoke;
+          border: black solid 4px;
+          font-size: xx-large;
+          font-family: 'Showcard Gothic';
+        "
+      >
+        Stocks &nbsp; Inventory &nbsp; for &nbsp; you..
+      </div>
+
+      <!-- Mid component -->
+      <div
+        class="mid-component"
+        style="
+          height: 100%;
+          width: 50%;
+          margin-top: 6%;
+          margin-bottom: 7%;
+          margin-left: 15%;
+          padding-left: 10%;
+          padding-top: 2%;
+        "
+      >
+        {% block content %}
+        <span
+          style="
+            height: 10%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            margin-left: 5%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            padding-right: 1%;
+            padding-left: 1%;
+            background-color: blue;
+            color: white;
+            border-radius: 5%;
+            font-size: x-large;
+            font-family: 'Showcard Gothic';
+          "
+          >Sign In..!</span
+        >
+        <form
+          method="POST"
+          style="border: black solid 2px; padding-left: 4%; padding-top: 2%"
+        >
+          {% csrf_token %} {% for field in form %}
+          <p>
+            &nbsp;<b>{{ field.label }}</b> : {{field}} <br />
+            <br />
+            &nbsp;{{ field.label }} : <input type="password" />
+          </p>
+          {% endfor %}
+
+          <button
+            class="login-button-component"
+            style="
+              height: 10%;
+              margin-top: 3%;
+              margin-bottom: 2%;
+              margin-left: 60%;
+              padding: 2%;
+              padding-right: 4%;
+              padding-left: 4%;
+              background-color: blue;
+              color: white;
+              border-radius: 5%;
+              font-size: xx-large;
+              font-family: 'Showcard Gothic';
+            "
+          >
+            <a
+              href="{% url 'dashboard_url' %}"
+              style="color: white; text-decoration: none"
+            >
+              Sign In</a
+            >
+          </button>
+        </form>
+        {% endblock %}
+      </div>
+
+      <!-- footer component -->
+      <div
+        class="footer-component"
+        style="
+          height: 40%;
+          width: full;
+          margin-top: 1%;
+          padding: 1%;
+          background-color: crimson;
+          color: whitesmoke;
+          border: black solid 5px;
+          font-size: x-large;
+          font-family: 'Showcard Gothic';
+        "
+      >
+        Technical &nbsp; Round: &nbsp; 2023 &nbsp; -- &nbsp; The &nbsp; Investor
+        &nbsp; Co.
+      </div>
+    </div>
+  </body>
+</html>

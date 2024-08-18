@@ -1,0 +1,74 @@
+{% load static %}
+
+<!-- login_failure.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stocks</title>
+  </head>
+  <body>
+    <div class="login-failure-page">
+    
+    <!-- header component -->
+    <div
+        class="header-component"
+        style="
+          height: 40%;
+          width: full;
+          padding: 1%;
+          background-color: crimson;
+          color: whitesmoke;
+          border: black solid 4px;
+          font-size: xx-large;
+          font-family: 'Showcard Gothic';"
+        >
+        Stocks &nbsp; Inventory &nbsp; for &nbsp; you..
+    </div>
+
+    <!-- Mid component -->
+    <div
+        class="mid-component"
+        style="
+          height: 100%;
+          width: full;
+          margin-top: 6%;
+          padding-top: 2%;"
+        >
+        {% block content %}
+            <b><span style="margin-left: 10%; font-size: xx-large">&nbsp;You are not logged in.. Please do try logging in again...</span><b><br />
+            <button
+                class="login-button-component"
+                style="
+                    height: 10%;
+                    margin-top: 7%;
+                    margin-left: 60%;
+                    padding: 2%;
+                    padding-right: 4%;
+                    padding-left: 4%;
+                    background-color: blue;
+                    color: white;
+                    border-radius: 5%;
+                    font-size: xx-large;
+                    font-family: 'Showcard Gothic';">
+                <a href="{% url 'signin_url' %}" style="color: white; text-decoration: none">Sign In</a>
+            </button>
+        {% endblock %}
+    </div>
+
+    <!-- footer component -->
+    <div class="footer-component"
+        style="
+            height: 40%;
+            width: full;
+            margin-top: 10%;
+            padding: 1%;
+            background-color: crimson;
+            color: whitesmoke;
+            border: black solid 5px;
+            font-size: x-large;
+            font-family: 'Showcard Gothic';"
+        >
+    Technical &nbsp; Round: &nbsp; 2023 &nbsp; -- &nbsp; The &nbsp; Investor&nbsp; Co.
+    </div>
+  </body>
+</html>
